@@ -4,16 +4,20 @@ import { VitePWA } from 'vite-plugin-pwa';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'pwa-192x192.png', 'pwa-512x512.png'],
       manifest: {
-        name: 'Цифрова екосистема для батьків',
+        name: 'Цифровий освітній робочий простір',
         short_name: 'EcoParents',
-        description: 'Додаток для батьків та опікунів',
+        start_url: '/',
+        display: 'standalone',
+        description:
+          "Додаток передбачає можливість роботи офлайн із подальшою синхронізацією, прозорий зворотний зв'язок та потенційну взаємодію з наявними освітніми системами без дублювання їхніх адміністративних функцій",
         theme_color: '#ffffff',
         icons: [
           {
