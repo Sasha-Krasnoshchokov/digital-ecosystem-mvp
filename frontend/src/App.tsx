@@ -1,10 +1,7 @@
 import './App.css';
-import { getSupabaseClient } from './lib/supabase';
 
 function App() {
-  const dbClient = getSupabaseClient();
-  console.log({ dbClient });
-  return <div>MVP PWA</div>;
+  return <div className="flex items-center justify-center h-screen">MVP PWA</div>;
 }
 
 export default App;
